@@ -11,8 +11,8 @@ export default function About() {
         <div className="mt-10 grid gap-6 rounded-2xl border border-border bg-card p-6 md:grid-cols-2">
           <div>
             <div className="text-sm font-semibold text-muted-foreground">Подход</div>
-            <p className="mt-2">
-              Просто��а без упрощений. Мы выбираем чистые сочетания, четкие акценты и
+            <p className="mt-2 ml-px">
+              Простота без упрощений. Мы выбираем чистые сочетания, четкие акценты и
               понятные композиции — как в дизайне, так и на тарелке.
             </p>
           </div>
