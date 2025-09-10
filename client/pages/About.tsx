@@ -10,17 +10,21 @@ export default function About() {
         </p>
         <div className="mt-10 grid gap-6 rounded-2xl border border-border bg-card p-6 md:grid-cols-2">
           <div>
-            <div className="text-sm font-semibold text-muted-foreground">Подход</div>
+            <div className="text-sm font-semibold text-muted-foreground">
+              Подход
+            </div>
             <p className="mt-2 ml-px">
-              Простота без упрощений. Мы выбираем чистые сочетания, четкие акценты и
-              понятные композиции — как в дизайне, так и на тарелке.
+              Простота без упрощений. Мы выбираем чистые сочетания, четкие
+              акценты и понятные композиции — как в дизайне, так и на тарелке.
             </p>
           </div>
           <div>
-            <div className="text-sm font-semibold text-muted-foreground">Пространство</div>
+            <div className="text-sm font-semibold text-muted-foreground">
+              Пространство
+            </div>
             <p className="mt-2">
-              Свет, геометрия и теплые оттенки. Интерьер в стиле флэт с отсылками к
-              модернизму задает настроение для вечера.
+              Свет, геометрия и теплые оттенки. Интерьер в стиле флэт с
+              отсылками к модернизму задает настроение для вечера.
             </p>
           </div>
         </div>
