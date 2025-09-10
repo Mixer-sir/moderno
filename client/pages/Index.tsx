@@ -92,9 +92,13 @@ export default function Index() {
               на своём месте.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.18 }} className="mt-8 flex flex-wrap gap-3">
-              <a href="#Меню" className="inline-flex items-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]">
+              <button
+                type="button"
+                onClick={() => document.getElementById("Меню")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                className="inline-flex items-center rounded-md bg-primary px-5 py-3 font-semibold text-primary-foreground transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
+              >
                 Смотреть меню
-              </a>
+              </button>
               <Link
                 to="/reserve"
                 className="inline-flex items-center rounded-md border border-border bg-background px-5 py-3 font-semibold transition-all hover:-translate-y-0.5 hover:border-ring"
@@ -118,13 +122,14 @@ export default function Index() {
       <section id="Меню" className="border-b border-border/60 bg-background/60">
         <div className="container flex flex-wrap items-center gap-2 py-4">
           {Object.keys(menu).map((k) => (
-            <a
+            <button
+              type="button"
               key={k}
-              href={`#${k}`}
+              onClick={() => document.getElementById(k)?.scrollIntoView({ behavior: "smooth", block: "start" })}
               className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-ring"
             >
               {k}
-            </a>
+            </button>
           ))}
         </div>
       </section>
