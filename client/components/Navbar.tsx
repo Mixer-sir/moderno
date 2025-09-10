@@ -3,10 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
   [
-    "px-3 py-2 rounded-md text-sm font-medium transition-colors",
+    "px-3 py-2 rounded-md text-sm font-medium transition-all duration-200",
     isActive
       ? "text-foreground bg-secondary"
-      : "text-foreground/80 hover:text-foreground hover:bg-secondary",
+      : "text-foreground/80 hover:text-foreground hover:bg-secondary hover:-translate-y-0.5",
   ].join(" ");
 
 export default function Navbar() {
@@ -35,14 +35,14 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <Link
             to="/reserve"
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform duration-200 hover:opacity-90 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99]"
           >
             Забронировать стол
           </Link>
         </div>
 
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 transition-transform active:scale-95 md:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label="Открыть меню"
         >
@@ -67,7 +67,7 @@ export default function Navbar() {
             <Link
               to="/reserve"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+              className="mt-2 inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform duration-200 active:scale-95"
             >
               Забронировать стол
             </Link>
